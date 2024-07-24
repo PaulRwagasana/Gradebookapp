@@ -151,7 +151,7 @@ def main():
     gradebook = GradeBook()
 
     while True:
-        print("\nWelcome to the Grade Book Application")
+        print("\n Grade Book Application")
         print("1. Add Student")
         print("2. Add Course")
         print("3. Register Student for Course")
