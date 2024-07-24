@@ -7,8 +7,7 @@ class Student:
         self.courses_registered = []
         self.GPA = 0.0
 
-    
-    def calculate_GPA(self):
+ def calculate_GPA(self):
         if not self.courses_registered:
             return self.GPA
         total_gpa = 0.0
