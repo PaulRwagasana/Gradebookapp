@@ -196,7 +196,7 @@ def main():
             print("Exiting the Grade Book Application. Goodbye!")
             exit()
         else:
-            print("Invalid option, please select again.")
+            print("Invalid option,Try again.")
 
 if __name__ == "__main__":
     main()
