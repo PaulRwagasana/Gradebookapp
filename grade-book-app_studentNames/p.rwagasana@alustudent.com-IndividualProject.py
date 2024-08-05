@@ -88,6 +88,7 @@ class GradeBook:
         self.student_list.append(student_details)
         print(f"Student {names} added successfully.")
 
+
     def add_course(self):
         name = input("Enter course name: ")
         trimester = input("Enter trimester: ")
