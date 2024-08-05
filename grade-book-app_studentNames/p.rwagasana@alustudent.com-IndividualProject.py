@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+
 class Student:
     def __init__(self, email, names):
         self.email = email
@@ -7,7 +8,8 @@ class Student:
         self.courses_registered = []
         self.GPA = 0.0
 
- def calculate_GPA(self):
+    
+    def calculate_GPA(self):
         if not self.courses_registered:
             return self.GPA
         total_gpa = 0.0
@@ -150,7 +152,7 @@ def main():
     gradebook = GradeBook()
 
     while True:
-        print("\n Grade Book Application")
+        print("\nWelcome to the Grade Book Application")
         print("1. Add Student")
         print("2. Add Course")
         print("3. Register Student for Course")
@@ -195,7 +197,7 @@ def main():
             print("Exiting the Grade Book Application. Goodbye!")
             exit()
         else:
-            print("Invalid option,Try again.")
+            print("Invalid option, please select again.")
 
 if __name__ == "__main__":
     main()
