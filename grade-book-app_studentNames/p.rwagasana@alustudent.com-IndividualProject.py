@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import json
-
 class Student:
     def __init__(self, email, names):
         self.email = email
