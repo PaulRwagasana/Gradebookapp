@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 import json
 
 class Student:
@@ -9,17 +8,17 @@ class Student:
         self.courses_registered = []
         self.GPA = 0.0
 
+    
     def calculate_GPA(self):
         if not self.courses_registered:
             return self.GPA
         total_gpa = 0.0
-        for course_dict in self.courses_registered:
+        for course_dict in self.courses_registered: 
             for grade in course_dict.values():
                 gpa = grade * 4 / 100
                 total_gpa += gpa
         self.GPA = total_gpa / len(self.courses_registered)
         return self.GPA
-
 
      # def calculate_GPA(self):
     # if not self.courses_registered:
@@ -88,7 +87,7 @@ class GradeBook:
         email = input("Please Enter your email: ")
         student_details = Student(email, names)
         self.student_list.append(student_details)
-        print("Student %s added successfully." % names)
+        print(f"Student {names} added successfully.")
 
     def add_course(self):
         name = input("Enter course name: ")
@@ -96,7 +95,7 @@ class GradeBook:
         credits = int(input("Enter course credits: "))
         course = Course(name, trimester, credits)
         self.course_list.append(course)
-           print("Student %s added successfully." % name)
+        print(f"Course {name} added successfully.")
     
     def register_student_for_course(self):
         student_names = input("Enter your names: ")
@@ -153,7 +152,7 @@ def main():
     gradebook = GradeBook()
 
     while True:
-        print("\n Grade Book Application")
+        print("\nWelcome to the Grade Book Application")
         print("1. Add Student")
         print("2. Add Course")
         print("3. Register Student for Course")
@@ -198,7 +197,7 @@ def main():
             print("Exiting the Grade Book Application. Goodbye!")
             exit()
         else:
-            print("Invalid option,Try again.")
+            print("Invalid option, please select again.")
 
 if __name__ == "__main__":
     main()
