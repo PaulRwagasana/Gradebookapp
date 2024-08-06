@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import json
+import jsoin
 
 class Student:
     def __init__(self, email, names):
@@ -9,6 +9,7 @@ class Student:
         self.courses_registered = []
         self.GPA = 0.0
 
+    
     def calculate_GPA(self):
         if not self.courses_registered:
             return self.GPA
@@ -19,6 +20,27 @@ class Student:
                 total_gpa += gpa
         self.GPA = total_gpa / len(self.courses_registered)
         return self.GPA
+
+     # def calculate_GPA(self):
+    # if not self.courses_registered:
+    #     return self.GPA
+    
+    # total_gpa = 0.0
+    # for course_dict in self.courses_registered:
+    #     for grade in course_dict.values():
+    #         gpa = grade * 4 / 100  
+    #         total_gpa += gpa
+    
+    # self.GPA = total_gpa / len(self.courses_registered)
+    # return self.GPA
+    # def calculate_GPA(self):
+    # if not self.courses_registered:
+    #     return self.GPA
+    # elif:
+    #     for grade in self.courses_registered:
+    #         self.GPA = grade * 4 / 100
+    # return self.GPA
+
 
     def register_for_course(self, course_name, grade):
         course_dict = {course_name: grade}
@@ -90,7 +112,7 @@ class GradeBook:
             print(f"Couldn't register {student_names} in {course_name} course.")
 
     def calculate_GPA(self):
-        for student in self.student_list:
+        for student in  self.student_list:
             student.calculate_GPA()
 
     def calculate_ranking(self):
@@ -180,4 +202,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
