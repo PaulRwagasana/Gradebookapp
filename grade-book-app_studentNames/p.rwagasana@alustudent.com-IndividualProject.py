@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import json
+
 class Student:
     def __init__(self, email, names):
         self.email = email
@@ -82,12 +83,11 @@ class GradeBook:
         self.student_list = []
 
     def add_student(self):
-        Names = input("Please Enter your names: ")
+        names = input("Please Enter your names: ")
         email = input("Please Enter your email: ")
         student_details = Student(email, names)
         self.student_list.append(student_details)
-        print(f"Student {Names} added successfully.")
-
+        print(f"Student {names} added successfully.")
 
     def add_course(self):
         name = input("Enter course name: ")
