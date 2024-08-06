@@ -95,7 +95,7 @@ class GradeBook:
         credits = int(input("Enter course credits: "))
         course = Course(name, trimester, credits)
         self.course_list.append(course)
-        print(f"Course {name} added successfully.")
+        print(f"Course {} added successfully.".format(names))
     
     def register_student_for_course(self):
         student_names = input("Enter your names: ")
