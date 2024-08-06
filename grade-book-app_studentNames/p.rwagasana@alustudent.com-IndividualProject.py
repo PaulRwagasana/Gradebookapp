@@ -82,11 +82,11 @@ class GradeBook:
         self.student_list = []
 
     def add_student(self):
-        names = input("Please Enter your names: ")
+        Names = input("Please Enter your names: ")
         email = input("Please Enter your email: ")
         student_details = Student(email, names)
         self.student_list.append(student_details)
-        print(f"Student {names} added successfully.")
+        print(f"Student {Names} added successfully.")
 
 
     def add_course(self):
