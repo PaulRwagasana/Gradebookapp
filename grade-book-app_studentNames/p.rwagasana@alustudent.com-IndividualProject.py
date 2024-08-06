@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 import json
 
 class Student:
@@ -19,6 +18,26 @@ class Student:
                 total_gpa += gpa
         self.GPA = total_gpa / len(self.courses_registered)
         return self.GPA
+
+     # def calculate_GPA(self):
+    # if not self.courses_registered:
+    #     return self.GPA
+    
+    # total_gpa = 0.0
+    # for course_dict in self.courses_registered:
+    #     for grade in course_dict.values():
+    #         gpa = grade * 4 / 100  
+    #         total_gpa += gpa
+    
+    # self.GPA = total_gpa / len(self.courses_registered)
+    # return self.GPA
+    # def calculate_GPA(self):
+    # if not self.courses_registered:
+    #     return self.GPA
+    # elif:
+    #     for grade in self.courses_registered:
+    #         self.GPA = grade * 4 / 100
+    # return self.GPA
 
 
     def register_for_course(self, course_name, grade):
