@@ -95,7 +95,7 @@ class GradeBook:
         credits = int(input("Enter course credits: "))
         course = Course(name, trimester, credits)
         self.course_list.append(course)
-        print(f"Course {} added successfully.".format(name))
+        print("Course {} added successfully.".format(name))
     
     def register_student_for_course(self):
         student_names = input("Enter your names: ")
@@ -106,9 +106,9 @@ class GradeBook:
         if student and course:
             grade = float(input("Enter your grade: "))
             student.register_for_course(course_name, grade)
-            print(f"{student_names} has been registered in the {course_name} course.")
+            print("{} has been registered in the {} course.".format(student_names, course_name))
         else:
-            print(f"Couldn't register {student_names} in {course_name} course.")
+           print("Couldn't register {} in {} course.".format(student_names, course_name))
 
     def calculate_GPA(self):
         for student in  self.student_list:
@@ -178,13 +178,13 @@ def main():
             gradebook.calculate_ranking()
             print("Students ranked by GPA:")
             for student in gradebook.student_list:
-                print(f"{student.names}: GPA {student.GPA}")
+                print("{}: GPA {}".format(student.names, student.GPA))
         elif choice == "6":
             filtered_students = gradebook.search_by_grade()
             if filtered_students:
                 print("Filtered Students:")
                 for student in filtered_students:
-                    print(f"{student.names}: GPA {student.GPA}")
+                    print("{}: GPA {}".format(student.names, student.GPA))
             else:
                 print("No students found in the specified GPA range.")
         elif choice == "7":
